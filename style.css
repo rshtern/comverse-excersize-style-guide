@@ -1,0 +1,634 @@
+*, body{
+	margin: 0;
+	padding: 0;
+	/*border: 1px solid rgba(50, 50, 50, 0.5);*/
+}
+header, footer, section{
+	overflow: auto;
+}
+.head-wrap, .hero-wrap, .services-wrap, .news-wrap, .clients-wrap, .footer-wrap{
+	width: 940px;
+	margin: 0 auto;
+	font-family: 'Alegreya Sans', sans-serif;
+}
+
+li{
+	list-style: none;
+	display: inline-block;
+}
+a{
+	font-family: 'Alegreya Sans', sans-serif;
+	text-decoration: none;
+	color:#fff;
+}
+
+/* fixes and reset */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+/* colors */
+header a{
+	color: #585951;
+}
+.search-border{
+	border: 1px solid #d2d2d2;
+	border-radius: 5px;
+}
+.search-icon{
+	color: #3097cb;
+}
+.pink{
+	background: #fd439e;
+	opacity: 0.95;
+}
+.green{
+	background: #69c139;
+	opacity: 0.95;
+}
+.orange{
+	background: #fe700d;
+	opacity: 0.95;
+}
+.blue-text-clients{
+	color: #47acdd;
+}
+.gray-text-clients{
+	color: #565656;
+}
+.bullet{
+	width: 11px;
+	height: 11px;
+	border-radius: 2px;
+	margin-right:7px;
+	background: #fff;
+}
+.bullet:last-child{
+	margin-right:0px;
+}
+.blue-bullet{
+	background: #2e95ca;
+	width: 11px;
+	height: 11px;
+	border-radius: 2px;
+	margin-right:7px;
+}
+.blue{
+	background: #3399cc;
+}
+.footer-gray{
+	background: #262626;
+}
+.white{
+	color: #fff;
+}
+.footer-text{
+	color: #eee;
+	display:inline-block;
+}
+.contact-gray{
+	background: #424242;
+}
+.contact-blue{
+	color: #4ea7d3;
+}
+.cite-before{
+	color:#d8d8d8;
+}
+
+/* typography */
+@font-face{
+	font-family: 'entypo';
+	src: url('font/entypo/entypo.eot');
+	src: url('font/entypo/entypo.eot?#iefix') format('embedded-opentype'),
+    url('font/entypo/entypo.woff') format('woff'),
+    url('font/entypo/entypo.ttf') format('truetype'),
+    url('font/entypo/entypo.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+h1{
+	font-weight: 300;
+	font-size: 1.8em;
+	line-height: 1;
+	margin-bottom: 25px;
+}
+h1 strong{
+	font-weight: 400;
+}
+h2{
+	font-size: 1.56em;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+h3{
+	font-weight: 300;
+	font-size: 1.35em;
+	line-height: 1.5em;
+
+}
+.date h3{
+	font-size: 1.8em;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+}
+.date h4{
+	font-size: 0.78em;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+}
+h4{
+	text-transform: uppercase;
+}
+p{
+	font-size: 0.85em;
+}
+.hero p{
+	margin-bottom: 25px;
+}
+
+cite{
+	clear: left;
+	color: #565656;
+	font-style: normal;
+	font-size: 1.3em;
+}
+cite:before{
+	/*content: ";";*/
+	font-family: 'entypo';
+	position: relative;
+	top: 6px;
+	margin-right: 5px;
+	line-height: 0;
+	font-size: 3.5em;
+	font-weight: 500;
+	color:#d8d8d8;
+}
+
+/* elements */
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+header{
+	background: #fff;
+	background-size: cover;
+	height: 77px;
+	padding-top: 13px;
+	position: relative;
+}
+header img{
+	margin-bottom:15px;
+	float: left;
+}
+header nav{
+	float: left;
+	display: inline-block;
+	margin-left: 48px;
+	position: absolute;
+	bottom:15px;
+}
+header li:after{
+	content:" | ";
+	margin:0 11px;
+}
+header li:last-child:after{
+	content:none;
+	margin:0;
+}
+.options{
+	width:147px;
+	float: right;
+}
+.options select{
+	border: 0;
+}
+.options form{
+	position: absolute;
+	bottom: 15px;
+	width: inherit;
+}
+.search-border{
+	float: left;
+	position: relative;
+	width: inherit;
+	z-index: 1;
+}
+.search-icon{
+	color: #000;
+	position: absolute;
+	right: 0;
+	z-index: 10;
+	border: none;
+}
+
+/*********************  box shadow  *************************/
+.shadow{
+	-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.35);
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.35);
+}
+/**********************  hero section  **********************/
+.hero{
+	padding: 60px 0 6px;
+	background: url('images/hp_ferriswheel_2500x639.jpg') no-repeat;
+	background-position: center bottom;
+}
+
+/**********************  button style  **********************/
+
+a.button{
+	display: block;
+	position: relative;
+	font-size: 1em;
+	width:180px;
+	padding: 0.75em;
+	border-radius: 6px;
+	/**  gradient background color  **/ 
+	background: rgb(46,148,200); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(46,148,200,1) 0%, rgba(17,136,196,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(46,148,200,1)), color-stop(100%,rgba(17,136,196,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(46,148,200,1) 0%,rgba(17,136,196,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(46,148,200,1) 0%,rgba(17,136,196,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(46,148,200,1) 0%,rgba(17,136,196,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(46,148,200,1) 0%,rgba(17,136,196,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e94c8', endColorstr='#1188c4',GradientType=0 ); /* IE6-9 */
+}
+a.button::after{
+	content:"\25b6";
+	position: absolute;
+	right: 10px;
+}
+/**********************  carousel bullets  **********************/
+
+.carousel{
+	margin-top: 12px;
+}
+
+/**********************  rounded colored boxes  **********************/
+
+.container{
+	margin: 65px 0 20px;
+}
+.box-rounded{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 31%;
+	float: left;
+	padding: 25px 42px 15px 12px;
+	border-radius: 10px;
+	margin-right: 32px;
+}
+.box-rounded:last-child{
+	margin-right: 0;
+}
+.box-rounded h3{
+	padding-bottom: 15px;
+}
+
+/**********************  services section  **********************/
+
+.services{
+	background: url('images/white_carbon.png') repeat,
+	#3d97ba;
+	text-align: center;
+}
+.services-wrap, .news-wrap ,.clients-wrap {
+	padding-top: 60px;
+}
+.services-wrap > h1, .news-wrap > h1 ,.clients-wrap > h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+.services-wrap h1{
+	margin-bottom: 50px;
+	
+}
+.services-wrap li{
+	display: inline-block;
+	width:150px;
+	vertical-align: bottom;
+}
+.services-wrap li:nth-child(2){
+	position: relative;
+	top: 1.2em;
+}
+.services-wrap ul{
+	padding-bottom: 40px;
+
+}
+.services-wrap a {
+margin: 0 auto 24px;
+display: block;
+}
+
+
+/********************** news section ************************/
+.news{
+	background: url('images/pic02.jpg') no-repeat;
+	background-position: center top;
+	text-align: center;
+}
+.news-wrap{
+	padding-bottom: 90px;
+}
+.news h1{
+	text-transform: uppercase;
+	margin-bottom: 80px;
+}
+
+aside{
+	display: block;
+	width:28%;
+	margin-right: 5%;
+}
+aside:last-child{
+		margin-right: 0;
+}
+aside h2{
+	text-align: left;
+	float: left;
+	margin-bottom: 20px;
+}
+aside:last-child > h2{
+	visibility: hidden;
+}
+.box-news{
+	float: left;
+	background: rgba(255, 255, 255, 0.4);
+	overflow: auto;
+	border-radius: 2px;
+}
+.box-news p{
+	color: #000;
+	display: block;
+	line-height: 1.4;
+	text-align: left;
+	width: 64%;
+	margin: 3% 0;
+}
+.box-news + a{
+	float:left;
+	margin-top: 15px;
+}
+
+/********************** date style ************************/
+.date{
+	width: 27%;
+	display: block;
+	background: #3399cc;
+	border-radius: 2px;
+	margin: 3%;
+	color: #fff;
+}
+.date h3{
+	font-size: 3em;
+	line-height: 1;
+	padding: 0 0 15%;
+	border-bottom: 1px dotted #fff;
+	
+}
+.date h4{
+	font-size: 1.2em;
+	line-height: 1;
+	width: 100%;
+	padding: 10% 0;
+}
+
+/********************** clients section ************************/
+.clients{
+	background: url('images/white_carbon.png') repeat, #ececec;
+}
+.clients-wrap + a{
+	margin: 0 auto 30px;
+	text-align: center;
+}
+.clients-wrap{
+	padding-bottom: 25px;
+}
+.box-clients{
+	width: 346px;
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+}
+.box-clients:last-child{
+	width: 228px;
+	margin-right: 0px;
+}
+
+.box-large article, .box-medium article{
+	border-bottom: 1px solid #dddddd;
+}
+.box-large article > img {
+	margin-bottom: 10px;
+}
+.box-large{
+	background: #fff;
+	width: 90%;
+	margin: 0 8px 0 0;
+	padding: 5% 5% 3%;
+}
+.box-large:first-child{
+	padding-bottom: 7%;
+}
+.box-medium{
+	background: #fff;
+	padding: 5% 5% 5%;
+	/*height: 224px;*/
+}
+.box-medium article{
+	padding-bottom: 8%;
+}
+
+.box-small{
+	width: 110px;
+	margin: 10px 5px 10px 0;
+
+}
+.box-small:last-child, .box-small.box-after{
+margin: 10px 0px;
+}
+.description{
+	margin-top: 3%;
+	float: left;
+}
+.description h4{
+	font-weight: 300;
+	color:#47acdd;
+}
+.description p{
+	font-weight: 300;
+	color:#565656;
+}
+
+.description + img{
+	float: right;
+}
+.box-medium .description{
+	margin: 5% 0 10%;
+}
+
+.box-clients.margin-top-zero .box-small{
+	margin-top: 0;
+}
+cite{
+	display: inline-block;
+	max-width: 200px;
+	margin-top: 10px;
+	margin-right: 4px;
+	padding-left: 6px;
+	vertical-align: top;
+}
+/********************** footer  ************************/
+footer{
+	background: url('images/black_carbon.png') repeat, #252525;
+	display: block;
+	height: auto;
+}
+.footer-wrap{
+	position: relative;
+}
+.footer-wrap li{
+	display: block;
+}
+.bottom-nav{
+	width: 670px;
+	margin: 30px 0 50px;
+}
+.bottom-nav h4{
+	font-weight: 300;
+	margin-bottom: 18px;
+}
+.bottom-nav li ul{
+	margin-right: 50px;
+}
+.box-contact{
+	position: absolute;
+	top: 0; right: 0; bottom: 0;
+	display: block;
+	width: 270px;
+	background: rgba(255, 255, 255, 0.15);
+}
+.box-contact > h3, .subscibe > h3{
+	text-transform: uppercase;
+	color: #4ea7d3;
+	font-weight: 700;
+	text-align: center;
+	margin: 20px 0 6px;
+}
+
+.latest-post{
+	width: 90%;
+	margin: 0 auto;
+	border-bottom:1px solid #6a6a6a; 
+	padding-bottom: 25px;
+}
+.latest-post .date{
+	padding-left: 0; 
+	background: none;
+	width: 38px;
+	float: left;
+	margin: 0;
+	border-radius: 0;
+}
+.latest-post .date h3{
+	line-height: 1;
+	border: none;
+	padding: 0;
+
+}
+.latest-post p{
+	width: 170px;
+	display: block;
+	float: left;
+	margin-left: 18px;
+	margin-top: 4px;
+	color: #fff;
+	font-size: 1.2em;
+}
+ .subscibe{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.subscibe input{
+	float: left;
+	border: 0;
+	height: 28px;
+}
+.subscibe input:first-child{
+	border-radius: 2px;
+	width: 180px;
+}
+input.button{
+	display: block;
+	position: relative;
+	font-size: 0.75em;
+	padding: 3px;
+	color: #fff;
+	border: 0;
+	border-radius: 2px;
+	/**  gradient background color  **/ 
+	background: rgb(46,148,200); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(46,148,200,1) 0%, rgba(17,136,196,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(46,148,200,1)), color-stop(100%,rgba(17,136,196,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(46,148,200,1) 0%,rgba(17,136,196,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(46,148,200,1) 0%,rgba(17,136,196,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(46,148,200,1) 0%,rgba(17,136,196,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(46,148,200,1) 0%,rgba(17,136,196,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e94c8', endColorstr='#1188c4',GradientType=0 ); /* IE6-9 */
+}
+.bottom-nav p{
+	position: absolute;
+	bottom: 2px;
+	color: #818181;
+}
+
+
+
+
+	/*********\  custom css for presentation  /*********/
+	/********* \  style guide purpose only	/*********/
+
+
+.sg-background-none{
+	background:none;
+	background: #bbb;
+}
+h5{ 
+	color: #000;
+	font-size: 1.5em;
+	border-bottom: 1px solid #000;
+	font-weight: 500;
+	font-family: 'Alegreya Sans', sans-serif;
+	line-height: 1.5em;
+	text-align: left;
+	width: 940px;
+	margin: 20px auto;
+	display: block;
+	clear: both;
+	overflow: auto;
+}
+h5.big{
+	text-align: center;
+	font-size: 2em;
+	font-weight: 700;
+	color: #fff;
+	background: #3399cc; 
+	margin: 0 auto 40px;
+	text-shadow: 0px 1px #444;
+}
+h5.medium{
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 700;
+	color: #fff;
+	background: url('images/white_carbon.png') repeat, #bbb;
+	margin: 0 auto 40px;
+	border-bottom: 0;
+	text-shadow: 0px 1px #444;
+}
